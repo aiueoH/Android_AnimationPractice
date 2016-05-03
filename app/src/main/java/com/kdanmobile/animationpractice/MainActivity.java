@@ -11,11 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.kdanmobile.animationpractice.screen.viewanimation.ViewAnimationFragment;
+import com.kdanmobile.animationpractice.screen.viewanimator.ViewAnimatorFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Fragment viewAnimationFragment;
+    private Fragment viewAnimatorFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         initFragments();
-        switchFragment(R.id.nav_viewAnimation);
+        switchFragment(R.id.nav_viewAnimator);
     }
 
     private void initFragments() {
-        viewAnimationFragment = new ViewAnimationFragment();
+        viewAnimatorFragment = new ViewAnimatorFragment();
     }
 
     @Override
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity
     private void switchFragment(int id) {
         Fragment fragment = null;
         switch (id) {
-            case R.id.nav_viewAnimation:
-                fragment = viewAnimationFragment;
+            case R.id.nav_viewAnimator:
+                fragment = viewAnimatorFragment;
                 break;
         }
         if (fragment != null) {
